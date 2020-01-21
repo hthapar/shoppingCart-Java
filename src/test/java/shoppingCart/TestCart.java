@@ -84,7 +84,7 @@ public class TestCart {
 
     @Test
     public void shouldCheckOffersOnAllItemsInCart(){
-        List<String> items = Arrays.asList("B","B","B"); //cart
+        List<String> items = Arrays.asList("B","A","B"); //cart
         CheckoutShoppingCart cart = new CheckoutShoppingCart(items);
 
         Products p = new Products();
@@ -94,7 +94,7 @@ public class TestCart {
 
             System.out.println("Qty: "+ qty);
             sum = cart.checkout(products2, qty);
-            assert (sum == 75);
+            assert (sum == 95);
 
     }
 

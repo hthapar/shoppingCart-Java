@@ -21,12 +21,12 @@ public class CheckoutShoppingCart {
             // and then getting its price from my product DB List
             Integer originalPrice = plist.get(productName);
 
-            if(((totalCartQuantity == 3) && (productName == "A") )){
+            if(((totalCartQuantity == 3) && (productName == "A"))){
                 newPrice = 130/3;
                 sumA += newPrice;
-                totalSum = sumA + sumB;
+                totalSum = sumA;
             }
-            if ((totalCartQuantity == 2) && (productName == "B")){
+            else if ((totalCartQuantity == 2) && (productName == "B")){
                 newPrice = 45/2;
                 sumB += newPrice;
                 totalSum = sumA + sumB;
