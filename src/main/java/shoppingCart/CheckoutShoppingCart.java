@@ -20,21 +20,20 @@ public class CheckoutShoppingCart {
 
             // and then getting its price from my product DB List
             Integer originalPrice = plist.get(productName);
-            totalSum += originalPrice;
 
             if(((totalCartQuantity == 3) && (productName == "A") )){
                 newPrice = 130/3;
                 sumA += newPrice;
+                totalSum = sumA + sumB;
             }
             if ((totalCartQuantity == 2) && (productName == "B")){
                 newPrice = 45/2;
                 sumB += newPrice;
+                totalSum = sumA + sumB;
             }
             else {
-                System.out.println("Else");
+                totalSum += originalPrice;
             }
-
-            totalSum = sumA + sumB;
         }
         System.out.println("Total Billing Amount: Rs." + totalSum);
         return totalSum;
